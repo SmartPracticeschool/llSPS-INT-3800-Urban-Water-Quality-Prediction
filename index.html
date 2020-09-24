@@ -1,0 +1,76 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<style>  
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+.container {  
+    padding: 50px;  
+  background-color: lightblue;  
+}  
+  
+input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: orange;  
+  outline: none;  
+}  
+ div {  
+            padding: 10px 0;  
+         }  
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}  
+.registerbtn {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 100%;  
+  opacity: 0.9;  
+}  
+.registerbtn:hover {  
+  opacity: 1;  
+}  
+</style>  
+</head>  
+<body>  
+<form action="http://localhost:5000/predict" method="post">  
+  <div class="container">  
+  <center>  <h1> Water Quality Index Predictor</h1> </center>  
+  <hr>  
+  <label> Enter DO Value </label>   
+  <input type="text" name="do" placeholder= "Enter DO Value" size="15" required />
+  <label> Enter pH Value </label>   
+  <input type="text" name="ph" placeholder= "Enter pH Value" size="15" required />
+  <label> Enter CO Value </label>   
+  <input type="text" name="co" placeholder= "Enter CO Value" size="15" required />
+  <label> Enter BOD Value </label>   
+  <input type="text" name="bod" placeholder= "Enter BOD Value" size="15" required />
+  <label> Enter NA Value </label>   
+  <input type="text" name="na" placeholder= "Enter NA Value" size="15" required />
+  <label> Enter TC Value </label>   
+  <input type="text" name="tc" placeholder= "Enter TC Value" size="15" required />   
+
+<div>  
+ 
+<button type="submit" class="registerbtn">Predict Water Quality Index(WQI)</button>  
+<br>
+<br> 
+<label>The Predicted Water Quality Index is:</label>   
+  <input type="text" placeholder= "Press Predict to get WQI" size="15" required, value={{wqi}} >   
+</form>  
+</body>  
+</html>  
